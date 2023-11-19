@@ -24,7 +24,7 @@ data_store = {
             1: {"question": "How many sides does a triangle have?", "answer": "3"},
             2: {"question": "If you have 2 apples and get 3 more, how many apples do you have?", "answer": "5"}
         },
-        "science": {
+        "physics": {
             0: {"question": "What causes day and night?", "answer": "The rotation of the Earth."},
             1: {"question": "What do plants need to grow?", "answer": "Water, sunlight, and soil"},
             2: {"question": "What is the boiling point of water?", "answer": "100 degrees Celsius"}
@@ -41,7 +41,7 @@ data_store = {
             1: {"question": "What is the area of a rectangle with length 4cm and width 3cm?", "answer": "12 square cm"},
             2: {"question": "What is the square root of 64?", "answer": "8"}
         },
-        "science": {
+        "physics": {
             0: {"question": "What is photosynthesis?", "answer": "The process by which green plants use sunlight to make food from carbon dioxide and water."},
             1: {"question": "What is the chemical formula for water?", "answer": "H2O"},
             2: {"question": "What are the three states of matter?", "answer": "Solid, liquid, gas"}
@@ -58,7 +58,7 @@ data_store = {
             1: {"question": "Solve the equation: 2x - 6 = 8.", "answer": "7"},
             2: {"question": "What is the value of Pi (π) to two decimal places?", "answer": "3.14"}
         },
-        "science": {
+        "physics": {
             0: {"question": "What is the law of conservation of mass?", "answer": "Matter is not created or destroyed in a chemical reaction."},
             1: {"question": "What is the primary source of energy for Earth?", "answer": "The Sun"},
             2: {"question": "What is the DNA double helix?", "answer": "The structure of DNA"}
