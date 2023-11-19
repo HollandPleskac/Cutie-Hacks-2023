@@ -39,55 +39,76 @@ export default function Home() {
       <div className='flex flex-col items-center justify-center' style={{ height: 'calc(100vh - 60px)' }} >
         <div className="hs-accordion-group bg-gray-800 px-[200px]" data-hs-accordion-always-open>
           <div className="hs-accordion active" id="hs-basic-always-open-heading-one">
-            <button className="hs-accordion-toggle hs-accordion-active:text-blue-600 py-3 inline-flex items-center gap-x-3 w-full font-semibold text-start text-gray-800 hover:text-gray-500 rounded-lg disabled:opacity-50 disabled:pointer-events-none dark:hs-accordion-active:text-blue-500 dark:text-gray-200 dark:hover:text-gray-400 dark:focus:outline-none dark:focus:text-gray-400" aria-controls="hs-basic-always-open-collapse-one">
+            <button className="my-8 text-2xl underline hover:decoration-4 hs-accordion-toggle hs-accordion-active:text-blue-600 py-3 inline-flex items-center gap-x-3 w-full font-semibold text-start text-gray-800 hover:text-gray-500 rounded-lg disabled:opacity-50 disabled:pointer-events-none dark:hs-accordion-active:text-blue-500 dark:text-gray-200 dark:hover:text-gray-400 dark:focus:outline-none dark:focus:text-gray-400" aria-controls="hs-basic-always-open-collapse-one">
               <svg className="hs-accordion-active:hidden block w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" /><path d="M12 5v14" /></svg>
               <svg className="hs-accordion-active:block hidden w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" /></svg>
               Grade School: Level 1
             </button>
             <div id="hs-basic-always-open-collapse-one" className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" aria-labelledby="hs-basic-always-open-heading-one">
               <p className="text-gray-800 dark:text-gray-200">
-                <em>This is the third item's accordion body.</em> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
+                <em>Problem set for grade school level. </em>Click on the subject you would like to learn more about and practice the problems until you are done!
               </p>
-              <p className="text-gray-800 dark:text-gray-200 mt-2">
+              
+              <Link className='block text-blue-500 mt-2' href="/level/grade_school/subject/math/question/0">
                 Math Problems
-              </p>
-              <Link className='text-white' href="/level/grade_school/subject/science/question/0">
-                Example Link
+              </Link>
+              <Link className='block text-blue-500 mt-2' href="/level/grade_school/subject/physics/question/0">
+                Physics Problems
+              </Link>
+              <Link className='block text-blue-500 mt-2' href="/level/grade_school/subject/english/question/0">
+                English Problems
               </Link>
 
-              <p className="text-gray-800 dark:text-gray-200 mt-2">
-                Physics Problems
-              </p>
-              <p className="text-gray-800 dark:text-gray-200 mt-2">
-                English Problems
-              </p>
+              
+              
             </div>
           </div>
 
           <div className="hs-accordion" id="hs-basic-always-open-heading-two">
-            <button className="hs-accordion-toggle hs-accordion-active:text-blue-600 py-3 inline-flex items-center gap-x-3 w-full font-semibold text-start text-gray-800 hover:text-gray-500 rounded-lg disabled:opacity-50 disabled:pointer-events-none dark:hs-accordion-active:text-blue-500 dark:text-gray-200 dark:hover:text-gray-400 dark:focus:outline-none dark:focus:text-gray-400" aria-controls="hs-basic-always-open-collapse-two">
+            <button className="my-8 text-2xl underline hover:decoration-4 hs-accordion-toggle hs-accordion-active:text-blue-600 py-3 inline-flex items-center gap-x-3 w-full font-semibold text-start text-gray-800 hover:text-gray-500 rounded-lg disabled:opacity-50 disabled:pointer-events-none dark:hs-accordion-active:text-blue-500 dark:text-gray-200 dark:hover:text-gray-400 dark:focus:outline-none dark:focus:text-gray-400" aria-controls="hs-basic-always-open-collapse-two">
               <svg className="hs-accordion-active:hidden block w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" /><path d="M12 5v14" /></svg>
               <svg className="hs-accordion-active:block hidden w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" /></svg>
               Middle School: Level 2
             </button>
+            
             <div id="hs-basic-always-open-collapse-two" className="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" aria-labelledby="hs-basic-always-open-heading-two">
               <p className="text-gray-800 dark:text-gray-200">
-                <em>This is the second item's accordion body.</em> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
+                <em>Problem set for middle school level.</em> Click on the subject you would like to learn more about and practice the problems until you are done!
               </p>
+              <Link className='block text-blue-500 mt-2' href="/level/middle_school/subject/math/question/0">
+                Math Problems
+              </Link>
+              <Link className='block text-blue-500 mt-2' href="/level/middle_school/subject/physics/question/0">
+                Physics Problems
+              </Link>
+              <Link className='block text-blue-500 mt-2' href="/level/middle_school/subject/english/question/0">
+                English Problems
+              </Link>
 
+            
             </div>
           </div>
 
           <div className="hs-accordion" id="hs-basic-always-open-heading-three">
-            <button className="hs-accordion-toggle hs-accordion-active:text-blue-600 py-3 inline-flex items-center gap-x-3 w-full font-semibold text-start text-gray-800 hover:text-gray-500 rounded-lg disabled:opacity-50 disabled:pointer-events-none dark:hs-accordion-active:text-blue-500 dark:text-gray-200 dark:hover:text-gray-400 dark:focus:outline-none dark:focus:text-gray-400" aria-controls="hs-basic-always-open-collapse-three">
+            <button className="my-8 text-2xl underline hover:decoration-4 hs-accordion-toggle hs-accordion-active:text-blue-600 py-3 inline-flex items-center gap-x-3 w-full font-semibold text-start text-gray-800 hover:text-gray-500 rounded-lg disabled:opacity-50 disabled:pointer-events-none dark:hs-accordion-active:text-blue-500 dark:text-gray-200 dark:hover:text-gray-400 dark:focus:outline-none dark:focus:text-gray-400" aria-controls="hs-basic-always-open-collapse-three">
               <svg className="hs-accordion-active:hidden block w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" /><path d="M12 5v14" /></svg>
               <svg className="hs-accordion-active:block hidden w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" /></svg>
               High School: Level 3
             </button>
             <div id="hs-basic-always-open-collapse-three" className="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" aria-labelledby="hs-basic-always-open-heading-three">
               <p className="text-gray-800 dark:text-gray-200">
-                <em>This is the first item's accordion body.</em> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
+                <em>Problem set for high school school level.</em> Click on the subject you would like to learn more about and practice the problems until you are done!
               </p>
+              <Link className='block text-blue-500 mt-2' href="/level/high_school/subject/math/question/0">
+                Math Problems
+              </Link>
+              <Link className='block text-blue-500 mt-2' href="/level/high_school/subject/physics/question/0">
+                Physics Problems
+              </Link>
+              <Link className='block text-blue-500 mt-2' href="/level/high_school/subject/english/question/0">
+                English Problems
+              </Link>
+
             </div>
           </div>
         </div>
