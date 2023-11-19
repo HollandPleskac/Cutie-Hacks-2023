@@ -1,5 +1,6 @@
 'use client'
 import 'preline';
+import Link from 'next/link';
 
 import { useEffect } from 'react'
 
@@ -50,6 +51,10 @@ export default function Home() {
               <p className="text-gray-800 dark:text-gray-200 mt-2">
                 Math Problems
               </p>
+              <Link className='text-white' href="/level/grade_school/subject/science/question/0">
+                Example Link
+              </Link>
+
               <p className="text-gray-800 dark:text-gray-200 mt-2">
                 Physics Problems
               </p>
@@ -69,7 +74,7 @@ export default function Home() {
               <p className="text-gray-800 dark:text-gray-200">
                 <em>This is the second item's accordion body.</em> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
               </p>
-              
+
             </div>
           </div>
 
