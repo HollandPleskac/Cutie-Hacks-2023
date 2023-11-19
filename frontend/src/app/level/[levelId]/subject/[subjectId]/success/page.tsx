@@ -5,61 +5,20 @@ import useSWR from 'swr'
 import { useRouter } from 'next/navigation'
 import React, { useState } from 'react';
 
-export default function QuestionPage({ params }: any) {
+export default function SuccessPage({ params }: any) {
     const router = useRouter()
 
-    const { levelId, subjectId, questionId } = params;
+    const { levelId, subjectId } = params;
 
-    const fetcher = async (url: any) => {
-        // console.log("fetching from url", url)
-        const res = await fetch(url)
-        if (!res.ok) {
-            throw new Error(res.statusText);
-        }
-        // console.log("q/a pair result",resJSON ) // can only read res.json() once so make variable for it if need to log it here
-        return res.json()
-    }
-
-    const apiUrl = levelId && subjectId && questionId ? `http://localhost:8000/${levelId}/${subjectId}/${questionId}` : null;
-
-    const { data, error } = useSWR(apiUrl, fetcher);
-
-    // User input validation
-    // State for the user's input and feedback message
-    const [userInput, setUserInput] = useState('');
-    const [feedback, setFeedback] = useState('');
-
-    // Handle input changes
-    const handleInputChange = (e:any) => {
-        setUserInput(e.target.value);
+    const formatText = (levelId:string, subjectId:String) => {
+        const formattedLevelId = levelId.split('_')
+                                        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                                        .join(' ');
+    
+        const formattedSubjectId = subjectId.charAt(0).toUpperCase() + subjectId.slice(1);
+    
+        return `Congratulations! 🎉 You completed all problems in ${formattedLevelId} ${formattedSubjectId}!`;
     };
-
-    // Validate the user's answer
-    const validateAnswer = () => {
-        if (userInput === data.answer) {
-            setFeedback('Correct! Moving to the next question...');
-            setTimeout(() => {
-                // Redirect to the next question
-                if (questionId+1 === 3)
-                router.push(`/level/${levelId}/subject/${subjectId}/question/${parseInt(questionId) + 1}`);
-                else
-                router.push('/level/${levelId}/subject/${subjectId}/success')
-            }, 2000);
-        } else {
-            setFeedback('Incorrect, please try again.');
-        }
-    };
-
-    if (error) {
-        console.log("see err", error)
-        return (
-            <div className='h-screen w-full bg-blue-400 flex justify-center items-center'>
-                <p className='text-white text-lg'>Sorry, that question does not exist</p>
-            </div>
-        );
-    }
-
-    if (!data) return <div></div>;
 
     return (
         <div>
@@ -87,22 +46,9 @@ export default function QuestionPage({ params }: any) {
             </header>
 
             <div className=' h-screen w-full flex flex-col justify-center items-center' style={{ height: 'calc(100vh - 60px)' }} >
-                <h1 className='' >{data.question}</h1>
-                <input
-                    type="text"
-                    value={userInput}
-                    onChange={handleInputChange}
-                    className='my-9 ring-2 ring-blue-500'></input>
-                <button className=' px-8 py-3 rounded-lg my-8 bg-blue-500 ring-1 ring-slate-500 ring-offset-1 ring-offset-slate-50 dark:ring-offset-slate-900'
-                    // onClick={() => {
-                    //     if (router)
-                    //         router.push(`/level/${levelId}/subject/${subjectId}/question/${parseInt(questionId) + 1}`)
-                    // }}
-                    onClick={validateAnswer}
-                >
-                    Next
-                </button>
-                {feedback && <p>{feedback}</p>}
+            <div className='h-screen w-full bg-blue-400 flex justify-center items-center'>
+                <p className='text-white text-lg'>{formatText(levelId, subjectId)}</p>
+            </div>
             </div>
 
             {/* Footer */}
