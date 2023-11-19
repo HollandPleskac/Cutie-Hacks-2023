@@ -14,10 +14,16 @@ app.add_middleware(
     allow_headers=["*"],  # Allows all headers
 )
 
+class QAPair(BaseModel):
+    question: str
+    answer: str
+
 data_store = {
     "grade_school": {
         "math": {},
-        "science": {},
+        "science": {
+            0: {"question":"q","answer":'a'}
+        },
         "english": {}
     },
     "middle_school": {
@@ -31,11 +37,6 @@ data_store = {
         "english": {}
     }
 }
-
-
-class QAPair(BaseModel):
-    question: str
-    answer: str
 
 @app.get("/")
 def read_root():

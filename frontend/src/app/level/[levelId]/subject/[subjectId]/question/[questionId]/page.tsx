@@ -34,8 +34,9 @@ export default function QuestionPage({ params }: any) {
     if (!data) return <div></div>;
 
     return (
-        <div className='h-screen w-full bg-blue-400' >
-            {"test"}
+        <div className='h-screen w-full bg-blue-400 flex flex-col' >
+            {data.question}
+            <h1>{data.answer}</h1>
             <button onClick={() => {
                 if (router)
                     router.push(`/level/${levelId}/subject/${subjectId}/question/${parseInt(questionId) + 1}`)
