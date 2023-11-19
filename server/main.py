@@ -25,9 +25,9 @@ data_store = {
             2: {"question": "If you have 2 apples and get 3 more, how many apples do you have?", "answer": "5"}
         },
         "physics": {
-            0: {"question": "What causes day and night?", "answer": "The rotation of the Earth."},
-            1: {"question": "What do plants need to grow?", "answer": "Water, sunlight, and soil"},
-            2: {"question": "What is the boiling point of water?", "answer": "100 degrees Celsius"}
+            0: {"question": "What force pulls objects toward the Earth?", "answer": "Gravity"},
+            1: {"question": "What is needed to make a simple circuit work?", "answer": "A power source, conductive path, and a load"},
+            2: {"question": "What happens to light when it passes through a prism?", "answer": "It splits into a spectrum of colors"}
         },
         "english": {
             0: {"question": "What is the plural form of 'fox'?", "answer": "Foxes"},
@@ -42,9 +42,9 @@ data_store = {
             2: {"question": "What is the square root of 64?", "answer": "8"}
         },
         "physics": {
-            0: {"question": "What is photosynthesis?", "answer": "The process by which green plants use sunlight to make food from carbon dioxide and water."},
-            1: {"question": "What is the chemical formula for water?", "answer": "H2O"},
-            2: {"question": "What are the three states of matter?", "answer": "Solid, liquid, gas"}
+            0: {"question": "What is the unit of measure for force?", "answer": "Newton"},
+            1: {"question": "What is the formula for speed?", "answer": "Speed = Distance / Time"},
+            2: {"question": "What is the term for the energy possessed by an object due to its motion?", "answer": "Kinetic energy"}
         },
         "english": {
             0: {"question": "Identify the adverb in this sentence: 'She ran quickly.'", "answer": "Quickly"},
@@ -59,9 +59,9 @@ data_store = {
             2: {"question": "What is the value of Pi (π) to two decimal places?", "answer": "3.14"}
         },
         "physics": {
-            0: {"question": "What is the law of conservation of mass?", "answer": "Matter is not created or destroyed in a chemical reaction."},
-            1: {"question": "What is the primary source of energy for Earth?", "answer": "The Sun"},
-            2: {"question": "What is the DNA double helix?", "answer": "The structure of DNA"}
+            0: {"question": "What is Newton's third law of motion?", "answer": "For every action, there is an equal and opposite reaction"},
+            1: {"question": "What is the term for the amount of matter in an object?", "answer": "Mass"},
+            2: {"question": "What phenomenon explains why the sky is blue?", "answer": "Rayleigh scattering"}
         },
         "english": {
             0: {"question": "Analyze the theme of 'freedom' in Mark Twain's 'Adventures of Huckleberry Finn.'", "answer": "The theme of freedom in the novel explores the conflict between civilization and individuality."},
@@ -70,6 +70,7 @@ data_store = {
         }
     }
 }
+
 
 
 @app.get("/")
